@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-roboto-condensed: "Roboto Condensed", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --color-primary-dark: #010101;
+  --color-secondary-dark: #040404;
+  --color-primary-gold: #c7b077;
+  --font-variation-settings: "wdth" 100;
+}
