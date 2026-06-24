@@ -66,7 +66,7 @@ const Content = ({ connectRef, contentRef }) => {
                         <div className="flex gap-2 items-center">
                             <span className="text-xs font-extralight">{selectedItem?.genre}</span>
                             <div className="w-0.5 h-0.5 rounded-full bg-white"></div>
-                            <span className="text-xs font-extralight">8:24</span>
+                            <span className="text-xs font-extralight">{selectedItem?.length || "0:00"}</span>
                         </div>
                         <p className="text-sm font-light mt-2">
                             {selectedItem?.summary}
