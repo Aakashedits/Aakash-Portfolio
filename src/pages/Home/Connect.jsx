@@ -28,8 +28,8 @@ const Connect = () => {
             <p className="text-3xl">LET'S CONNECT</p>
             <div className="w-16 border border-primary-gold"></div>
             <a href="mailto:aakashedit4u@gmail.com" className="flex gap-4 mt-4 items-center"><CiMail className="text-primary-gold text-4xl" />aakashedit4u@gmail.com</a>
-            <a href="https://www.youtube.com/@PocketProductions.p2" className="flex gap-4 mt-4 text-white sm:whitespace-nowrap items-center"><PiYoutubeLogoLight className="text-primary-gold text-4xl font-light" />https://www.youtube.com/@PocketProductions.p2</a>
-            <a href="https://www.instagram.com/akkioo111/" className="flex gap-4 mt-4 items-center"><CiInstagram className="text-primary-gold text-4xl" />https://www.instagram.com/akkioo111/</a>
+            <a href="https://www.youtube.com/@PocketProductions.p2" className="flex gap-4 mt-4 text-white sm:whitespace-nowrap items-center"><PiYoutubeLogoLight className="text-primary-gold text-4xl min-w-10 font-light" />https://www.youtube.com/@PocketProductions.p2</a>
+            <a href="https://www.instagram.com/akkioo111/" className="flex gap-4 mt-4 items-center"><CiInstagram className="text-primary-gold text-4xl min-w-11" />https://www.instagram.com/akkioo111/</a>
         </div>
 
     </div>

@@ -55,8 +55,8 @@ const Hero = ({ contentRef }) => {
 
 
   return (
-    <div className="aspect-9/16 sm:aspect-video w-screen overflow-hidden relative">
-      <div className="fixed inset-0 -z-10 w-screen">
+    <div className="aspect-9/16 sm:aspect-video max-h-screen w-full overflow-hidden relative">
+      <div className="fixed aspect-9/16 sm:aspect-video inset-0 -z-10 w-full">
         <video
           src={heroVidSrc}
           poster={heroVidPoster}
