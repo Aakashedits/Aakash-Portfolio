@@ -9,3 +9,14 @@
   --font-variation-settings: "wdth" 100;
   --breakpoint-3xl: 1537px;
 }
+
+/* Hide scrollbar */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -54,7 +54,7 @@ const Content = ({ connectRef, contentRef }) => {
             <div className="flex flex-col justify-center gap-8 w-full xl:w-[60%]">
                 {
                     content.map((contentItem) => (
-                        <GenreSection setShowVideoOverlay={setShowVideoOverlay} setSelectedItem={setSelectedItem} content={contentItem} />
+                        <GenreSection key={contentItem.genre} setShowVideoOverlay={setShowVideoOverlay} setSelectedItem={setSelectedItem} content={contentItem} />
                     ))
                 }
             </div>
