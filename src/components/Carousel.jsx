@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 
 const Carousel = ({
     children,
+    length,
     onScrollabilityChange,
     className = "",
     itemWidth = "85%", // Mobile
@@ -34,7 +35,7 @@ const Carousel = ({
         return () => {
             window.removeEventListener("resize", checkScrollable);
         };
-    }, [children]);
+    }, [length]);
 
     useEffect(() => {
         const updateWidth = () => {

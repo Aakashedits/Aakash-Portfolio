@@ -50,8 +50,8 @@ const Content = ({ connectRef, contentRef }) => {
     }, []);
 
     return (
-        <div className="relative w-full bg-secondary-dark z-20 py-12 px-12 3xl:py-20 sm:px-20 2xl:px-40 flex items-center gap-20 3xl:gap-40 text-white">
-            <div className="flex flex-col justify-center gap-8 w-full xl:w-[60%]">
+        <div className="relative w-full bg-secondary-dark z-20 py-12 px-12 3xl:py-20 sm:px-20 2xl:px-40 flex items-center gap-20 3xl:gap-40 text-white min-h-screen">
+            <div className="flex flex-col justify-center gap-10 w-full xl:w-[60%]">
                 {
                     content.map((contentItem) => (
                         <GenreSection key={contentItem.genre} setShowVideoOverlay={setShowVideoOverlay} setSelectedItem={setSelectedItem} content={contentItem} />
@@ -60,7 +60,7 @@ const Content = ({ connectRef, contentRef }) => {
             </div>
             {
                 screenWidth >= 1280 && (
-                    <div className="border border-slate-500 rounded-lg bg-primary-dark p-8 w-[40%]">
+                    <div className="border border-slate-500 rounded-lg bg-primary-dark p-8 w-[40%] sticky top-1/2 -translate-y-1/2 h-fit">
                         <iframe src={selectedItem?.video} title={selectedItem?.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen className="aspect-video w-full"></iframe>
                         <p className="text-lg mt-6">{selectedItem?.title}</p>
                         <div className="flex gap-2 items-center">

@@ -7,7 +7,7 @@ const Connect = () => {
   return (
     <div className="h-fit w-full bg-primary-dark z-20 py-12 px-12 3xl:py-20 sm:px-20 2xl:px-40 3xl:grid 3xl:grid-cols-[3fr_2fr] items-center gap-40 text-white">
         <div className="flex flex-col lg:flex-row gap-8">
-            <img className="rounded-md w-full sm:w-auto md:min-w-120 aspect-4/3 object-cover" src="https://res.cloudinary.com/dbyzyzx7p/image/upload/v1782230287/PROFILE_PIC_CHOTI_dycosa.webp"/>
+            <img alt="My profile picture" className="rounded-md w-full sm:w-auto md:min-w-120 aspect-4/3 object-cover" src="https://res.cloudinary.com/dbyzyzx7p/image/upload/v1782230287/PROFILE_PIC_CHOTI_dycosa.webp"/>
             <div>
                 <p className="text-3xl">ABOUT ME</p>
                 <div className="w-10 border border-primary-gold"></div>

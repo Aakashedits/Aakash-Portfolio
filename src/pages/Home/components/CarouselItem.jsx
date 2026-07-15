@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 const CarouselItem = (props) => {
@@ -34,6 +34,9 @@ const CarouselItem = (props) => {
             src={props.item?.thumbnail}
             key={props.item?.title}
             onLoad={() => setIsLoaded(true)}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className={`aspect-video w-full object-cover transition-all duration-300 ease-out hover:scale-105 ${
               isLoaded ? "opacity-100" : "opacity-0"
             }`}
@@ -45,4 +48,4 @@ const CarouselItem = (props) => {
   );
 };
 
-export default CarouselItem;
+export default memo(CarouselItem);
