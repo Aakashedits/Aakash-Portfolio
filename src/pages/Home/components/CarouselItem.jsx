@@ -1,5 +1,4 @@
 import { memo, useEffect, useState } from "react";
-import { IoClose } from "react-icons/io5";
 
 const CarouselItem = (props) => {
     const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
@@ -26,7 +25,7 @@ const CarouselItem = (props) => {
       onClick={handleItemClick}
       className="mt-3 cursor-pointer"
     >
-        <div className="relative aspect-video overflow-hidden rounded-md">
+        <div className={`relative ${ props.isShort ? " aspect-2/3 " : " aspect-video " } overflow-hidden rounded-md`}>
           {!isLoaded && (
             <div className="absolute inset-0 animate-pulse bg-gray-600/50" />
           )}
@@ -37,7 +36,7 @@ const CarouselItem = (props) => {
             loading="lazy"
             decoding="async"
             fetchPriority="low"
-            className={`aspect-video w-full object-cover transition-all duration-300 ease-out hover:scale-105 ${
+            className={`${ props.isShort ? " aspect-2/3 " : " aspect-video " } w-full object-cover transition-all duration-300 ease-out hover:scale-105 ${
               isLoaded ? "opacity-100" : "opacity-0"
             }`}
             alt={props.item?.title}

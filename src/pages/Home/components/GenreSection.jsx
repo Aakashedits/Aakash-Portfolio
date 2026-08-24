@@ -47,13 +47,14 @@ const GenreSection = (props) => {
               </div>
             </div>
 
-            <Carousel length={props.content?.items?.length ?? 0} loop prevRef={prevRef} nextRef={nextRef} onScrollabilityChange={setCanScroll}>
+            <Carousel shorts={props.content?.genre === "SHORTS/REELS"} length={props.content?.items?.length ?? 0} loop prevRef={prevRef} nextRef={nextRef} onScrollabilityChange={setCanScroll}>
               {props.content?.items?.map((contentItem) => (
                 <CarouselItem
                   key={contentItem.id}
                   item={contentItem}
                   setShowVideoOverlay={props.setShowVideoOverlay}
                   setSelectedItem={props.setSelectedItem}
+                  isShort={props.content?.genre === "SHORTS/REELS"}
                 />
               ))}
             </Carousel>

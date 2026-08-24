@@ -11,6 +11,7 @@ const Carousel = ({
     prevRef,
     nextRef,
     loop = false,
+    shorts = false
 }) => {
     const containerRef = useRef(null);
     const [cardWidth, setCardWidth] = useState(0);
@@ -111,13 +112,13 @@ const Carousel = ({
         >
             {React.Children.map(children, (child) => (
                 <div
-                    className="
+                    className={`
             shrink-0
             snap-start
-            basis-[85%]
-            sm:basis-[45%]
-            lg:basis-[24%]
-          "
+            ${
+                shorts ? "basis-[39%] sm:basis-[27%] lg:basis-[14.4%]" : "basis-[85%] sm:basis-[45%] lg:basis-[24%]"
+            }
+                    `}
                 >
                     {child}
                 </div>
